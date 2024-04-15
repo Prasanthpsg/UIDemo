@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="0" failed="2" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-15T21:31:03 IST" name="Suite" finished-at="2024-04-15T21:31:28 IST" duration-ms="25530">
+    <groups>
+      <group name="smoke">
+        <method signature="AssignleaveValidation.TC_01(java.lang.reflect.Method)[pri:0, instance:com.fedex.testscenarios.AssignleaveValidation@f7ba6af]" name="TC_01" class="com.fedex.testscenarios.AssignleaveValidation"/>
+        <method signature="ModuleValidation.TC_01(java.lang.reflect.Method)[pri:0, instance:com.fedex.testscenarios.ModuleValidation@c694dbf]" name="TC_01" class="com.fedex.testscenarios.ModuleValidation"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2024-04-15T21:31:03 IST" name="Test" finished-at="2024-04-15T21:31:28 IST" duration-ms="25530">
+      <class name="com.fedex.testscenarios.ModuleValidation">
+        <test-method is-config="true" signature="beforeDo()[pri:0, instance:com.fedex.testscenarios.ModuleValidation@c694dbf]" started-at="2024-04-15T21:31:03 IST" name="beforeDo" finished-at="2024-04-15T21:31:04 IST" duration-ms="981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeDo -->
+        <test-method is-config="true" signature="initDriver(java.lang.reflect.Method)[pri:0, instance:com.fedex.testscenarios.ModuleValidation@c694dbf]" started-at="2024-04-15T21:31:04 IST" name="initDriver" finished-at="2024-04-15T21:31:23 IST" duration-ms="18993" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[private void com.fedex.testscenarios.ModuleValidation.TC_01(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="TC_01(java.lang.reflect.Method)[pri:0, instance:com.fedex.testscenarios.ModuleValidation@c694dbf]" started-at="2024-04-15T21:31:23 IST" name="TC_01" description="First tc" finished-at="2024-04-15T21:31:23 IST" duration-ms="44" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[private void com.fedex.testscenarios.ModuleValidation.TC_01(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+at org.openqa.selenium.interactions.Actions.<init>(Actions.java:65)
+at com.fedex.dsmapplicationmethods.ApplicationMethods.validateInputtag(ApplicationMethods.java:16)
+at com.fedex.testscenarios.ModuleValidation.TC_01(ModuleValidation.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:829)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01 -->
+        <test-method is-config="true" signature="teardownDriver()[pri:0, instance:com.fedex.testscenarios.ModuleValidation@c694dbf]" started-at="2024-04-15T21:31:23 IST" name="teardownDriver" finished-at="2024-04-15T21:31:23 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownDriver -->
+        <test-method is-config="true" signature="afterDo()[pri:0, instance:com.fedex.testscenarios.ModuleValidation@c694dbf]" started-at="2024-04-15T21:31:23 IST" name="afterDo" finished-at="2024-04-15T21:31:24 IST" duration-ms="859" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterDo -->
+        <test-method is-config="true" signature="finalZip()[pri:0, instance:com.fedex.testscenarios.ModuleValidation@c694dbf]" started-at="2024-04-15T21:31:28 IST" name="finalZip" finished-at="2024-04-15T21:31:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalZip -->
+      </class> <!-- com.fedex.testscenarios.ModuleValidation -->
+      <class name="com.fedex.testscenarios.AssignleaveValidation">
+        <test-method is-config="true" signature="beforeDo()[pri:0, instance:com.fedex.testscenarios.AssignleaveValidation@f7ba6af]" started-at="2024-04-15T21:31:24 IST" name="beforeDo" finished-at="2024-04-15T21:31:24 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeDo -->
+        <test-method is-config="true" signature="initDriver(java.lang.reflect.Method)[pri:0, instance:com.fedex.testscenarios.AssignleaveValidation@f7ba6af]" started-at="2024-04-15T21:31:24 IST" name="initDriver" finished-at="2024-04-15T21:31:28 IST" duration-ms="4461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.fedex.testscenarios.AssignleaveValidation.TC_01(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="TC_01(java.lang.reflect.Method)[pri:0, instance:com.fedex.testscenarios.AssignleaveValidation@f7ba6af]" started-at="2024-04-15T21:31:28 IST" name="TC_01" description="First tc in assign leave module" finished-at="2024-04-15T21:31:28 IST" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.fedex.testscenarios.AssignleaveValidation.TC_01(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+at org.openqa.selenium.interactions.Actions.<init>(Actions.java:65)
+at com.fedex.dsmapplicationmethods.ApplicationMethods.validateInputtag(ApplicationMethods.java:16)
+at com.fedex.testscenarios.AssignleaveValidation.TC_01(AssignleaveValidation.java:38)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:829)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01 -->
+        <test-method is-config="true" signature="teardownDriver()[pri:0, instance:com.fedex.testscenarios.AssignleaveValidation@f7ba6af]" started-at="2024-04-15T21:31:28 IST" name="teardownDriver" finished-at="2024-04-15T21:31:28 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownDriver -->
+        <test-method is-config="true" signature="afterDo()[pri:0, instance:com.fedex.testscenarios.AssignleaveValidation@f7ba6af]" started-at="2024-04-15T21:31:28 IST" name="afterDo" finished-at="2024-04-15T21:31:28 IST" duration-ms="163" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterDo -->
+      </class> <!-- com.fedex.testscenarios.AssignleaveValidation -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

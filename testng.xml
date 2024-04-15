@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<!-- <listeners>
+	 <listener class-name="com.fedex.listenermanager.Listener"/>
+	 <listener class-name="com.fedex.listenermanager.AnnotationTransformer"/>
+</listeners> -->
+  <test thread-count="1" name="Test" parallel = "methods">
+    <classes>
+      <class name="com.fedex.frameworkutils.RunService"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
