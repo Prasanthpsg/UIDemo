@@ -36,7 +36,8 @@ public final class WebDriverFactory {
 		if(Objects.isNull(DriverManager.getDriver())) {
 			if(strbrowser.equalsIgnoreCase("CHROME")) {
 				System.out.println("Initializing the chrome browser");	
-				WebDriverManager.chromedriver().setup();
+				//WebDriverManager.chromedriver().setup();
+				WebDriverManager.chromedriver().clearDriverCache().setup();
 				ChromeOptions cop = new ChromeOptions();
 				//cop.addArguments("--disable-gpu");
 				//cop.addArguments("--disable-dev-shm-usage");
@@ -46,14 +47,14 @@ public final class WebDriverFactory {
 				//cop.addArguments("--headless");
 				//cop.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 				DesiredCapabilities desirecap = new DesiredCapabilities();
-				desirecap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+				//desirecap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 				desirecap.setCapability(ChromeOptions.CAPABILITY, cop);
 				cop.merge(desirecap);
 				WebDriver driver = new ChromeDriver(cop);
 				DriverManager.setDriver(driver);
 			} else if(strbrowser.equalsIgnoreCase("EDGE")) {
 				System.out.println("Initializing the edge browser");	
-				WebDriverManager.edgedriver().setup();
+				//WebDriverManager.edgedriver().setup();
 				WebDriver driver = new EdgeDriver();
 				DriverManager.setDriver(driver);
 			}
@@ -130,7 +131,7 @@ public final class WebDriverFactory {
 	 * launch browser
 	 */
 	private static void launchBrowser(String URL) {
-		DriverManager.getDriver().get(URL);
+		DriverManager.getDriver().navigate().to(URL);
 		System.out.println("Invoking the URL :" +URL);
 		Uninterruptibles.sleepUninterruptibly(5, TimeUnit.SECONDS);
 	}
