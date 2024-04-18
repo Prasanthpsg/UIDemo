@@ -3,6 +3,7 @@ package com.fedex.utility;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -35,27 +36,36 @@ public final class WebDriverFactory {
 
 		if(Objects.isNull(DriverManager.getDriver())) {
 			if(strbrowser.equalsIgnoreCase("CHROME")) {
-				System.out.println("Initializing the chrome browser");	
+				System.out.println("Initializing the chrome browser");
+		       // System.setProperty("webdriver.http.factory", "jdk-http-client");
 				//WebDriverManager.chromedriver().setup();
-				WebDriverManager.chromedriver().clearDriverCache().setup();
-				ChromeOptions cop = new ChromeOptions();
-				//cop.addArguments("--disable-gpu");
-				//cop.addArguments("--disable-dev-shm-usage");
-				//cop.addArguments("--no-sandbox");
-				cop.addArguments("--dns-prefetch-disable");
-				cop.addArguments("--start-maximized");
-				//cop.addArguments("--headless");
-				//cop.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
-				DesiredCapabilities desirecap = new DesiredCapabilities();
-				//desirecap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-				desirecap.setCapability(ChromeOptions.CAPABILITY, cop);
-				cop.merge(desirecap);
-				WebDriver driver = new ChromeDriver(cop);
-				DriverManager.setDriver(driver);
+				//WebDriverManager.chromedriver().proxy("internet.proxy.fedex.com:3128").setup();
+				try {
+					WebDriverManager.chromedriver().clearDriverCache().setup();
+					ChromeOptions cop = new ChromeOptions();
+					cop.addArguments("--disable-gpu");
+					cop.addArguments("--disable-dev-shm-usage");
+					//cop.addArguments("--no-sandbox");
+					//cop.addArguments("--dns-prefetch-disable");
+					cop.addArguments("--start-maximized");
+					cop.addArguments("--remote-allow-origins=*");
+					//cop.addArguments("--headless");
+					//cop.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+					//DesiredCapabilities desirecap = new DesiredCapabilities();
+					//desirecap.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
+					//desirecap.setCapability(ChromeOptions.CAPABILITY, cop);
+					///cop.merge(desirecap);
+					WebDriver driver = WebDriverManager.chromedriver().capabilities(cop).create();
+					//WebDriver driver = new ChromeDriver(cop);
+					DriverManager.setDriver(driver);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			} else if(strbrowser.equalsIgnoreCase("EDGE")) {
-				System.out.println("Initializing the edge browser");	
+				System.out.println("Initializing the edge browser");
+				WebDriverManager.edgedriver().proxy("internet.proxy.fedex.com:3128").setup();
 				//WebDriverManager.edgedriver().setup();
-				WebDriver driver = new EdgeDriver();
+				WebDriver driver = WebDriverManager.edgedriver().create();
 				DriverManager.setDriver(driver);
 			}
 			else {
@@ -131,8 +141,9 @@ public final class WebDriverFactory {
 	 * launch browser
 	 */
 	private static void launchBrowser(String URL) {
-		DriverManager.getDriver().navigate().to(URL);
 		System.out.println("Invoking the URL :" +URL);
+		DriverManager.getDriver().navigate().to(URL);
+		
 		Uninterruptibles.sleepUninterruptibly(5, TimeUnit.SECONDS);
 	}
 

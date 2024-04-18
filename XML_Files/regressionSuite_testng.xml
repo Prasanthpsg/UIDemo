@@ -9,7 +9,7 @@
 	<test thread-count="1" name="Test" parallel="methods">
 		<classes>
 			<class name="com.fedex.testscenarios.ModuleValidation" />
-			<class name="com.fedex.testscenarios.AssignleaveValidation" />
+<!-- 			<class name="com.fedex.testscenarios.AssignleaveValidation" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

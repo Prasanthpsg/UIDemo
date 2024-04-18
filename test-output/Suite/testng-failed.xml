@@ -6,25 +6,11 @@
     <listener class-name="com.fedex.listenermanager.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
     <classes>
-      <class name="com.fedex.testscenarios.AssignleaveValidation">
-        <methods>
-          <include name="initDriver"/>
-          <include name="teardownDriver"/>
-          <include name="finalZip"/>
-          <include name="beforeDo"/>
-          <include name="afterDo"/>
-          <include name="TC_01" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.fedex.testscenarios.AssignleaveValidation -->
       <class name="com.fedex.testscenarios.ModuleValidation">
         <methods>
           <include name="initDriver"/>
+          <include name="TC_02" invocation-numbers="0"/>
           <include name="teardownDriver"/>
           <include name="finalZip"/>
           <include name="afterDo"/>

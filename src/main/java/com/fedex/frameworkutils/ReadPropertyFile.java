@@ -32,6 +32,7 @@ public final class ReadPropertyFile {
 			e.printStackTrace();
 		}finally {
 			try {
+				System.out.println("In the Static finally block ");
 				fis.close();
 			} catch (IOException e) {
 				e.printStackTrace();

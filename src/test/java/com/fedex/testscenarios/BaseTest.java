@@ -40,7 +40,9 @@ public class BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public void initDriver(Method m) {
 		try {
+			System.out.println("Before method");	
 			WebDriverFactory.getDriverinstance(ReadPropertyFile.getValue(BasePropertiesEnums.BROWSER));
+			
 		} catch (Exception e) {
 			System.out.println("Issue in the BaseTest class");
 			e.printStackTrace();
@@ -50,6 +52,7 @@ public class BaseTest {
 
 	@AfterMethod(alwaysRun = true)
 	public void teardownDriver() {
+		System.out.println("After method quit driver");	
 		WebDriverFactory.quitDriver();
 	}
 
