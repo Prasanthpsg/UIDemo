@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.fedex.frameworkutils.ReadPropertyFile;
 import com.fedex.framworkenums.BasePropertiesEnums;
@@ -66,6 +67,7 @@ public final class WebDriverFactory {
 				WebDriverManager.edgedriver().proxy("internet.proxy.fedex.com:3128").setup();
 				//WebDriverManager.edgedriver().setup();
 				WebDriver driver = WebDriverManager.edgedriver().create();
+			//	WebDriver driver = new RemoteWebDriver(null);
 				DriverManager.setDriver(driver);
 			}
 			else {
