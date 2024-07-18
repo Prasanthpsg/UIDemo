@@ -73,7 +73,7 @@ public final class ModuleValidation extends BaseTest {
 	@AfterClass(alwaysRun = true)
 	public void afterDo() {
 		System.out.println("--In after class--");
-		Reports.flushReport();
+		//Reports.flushReport();
 	}
 	
 

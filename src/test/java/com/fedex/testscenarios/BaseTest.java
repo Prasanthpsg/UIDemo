@@ -58,6 +58,7 @@ public class BaseTest {
 
 	@AfterTest(alwaysRun = true)
 	public void finalZip() {
+		System.out.println("in after test annotation");
 		/*ZipOutputStream zos = null;  
 		BufferedInputStream bis = null;  
 
